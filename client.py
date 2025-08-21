@@ -1,10 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 import socket, json
-
 HOST = "127.0.0.1"
 PORT = 65432
-
 class BookingClient:
     def __init__(self, master):
         self.master = master
@@ -103,3 +101,4 @@ class BookingClient:
 root = tk.Tk()
 app = BookingClient(root)
 root.mainloop()
+
