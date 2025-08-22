@@ -4,7 +4,6 @@ import threading
 import json
 import sqlite3
 from datetime import datetime
-
 DB = "booking.db"
 HOST = "127.0.0.1"
 PORT = 65432
@@ -15,7 +14,6 @@ def get_db_connection():
     conn = sqlite3.connect(DB, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     return conn
-
 def handle_client(conn_sock, addr):
     print(f"[+] Client connected: {addr}")
     conn = get_db_connection()
@@ -196,3 +194,4 @@ def start_server():
 
 if __name__ == "__main__":
     start_server()
+
