@@ -18,7 +18,7 @@ class BookingClient:
         self.sock.sendall(json.dumps(req).encode())
         return json.loads(self.sock.recv(8192).decode())
 
-    # --- Login / Register ---
+    # --- Login / Register -
     def login_screen(self):
         for w in self.master.winfo_children(): w.destroy()
         tk.Label(self.master, text="Tên đăng nhập").pack()
@@ -101,4 +101,5 @@ class BookingClient:
 root = tk.Tk()
 app = BookingClient(root)
 root.mainloop()
+
 
