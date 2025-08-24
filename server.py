@@ -7,7 +7,6 @@ from datetime import datetime
 DB = "booking.db"
 HOST = "127.0.0.1"
 PORT = 65432
-
 # Helper DB functions
 def get_db_connection():
     # allow multithreaded access
@@ -194,4 +193,5 @@ def start_server():
 
 if __name__ == "__main__":
     start_server()
+
 
